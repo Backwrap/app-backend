@@ -2,8 +2,8 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ''
-labels: enhancement, hacktoberfest
-assignees: Excellence-arch
+labels: ''
+assignees: ''
 
 ---
 
