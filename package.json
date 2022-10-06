@@ -1,0 +1,24 @@
+{
+  "name": "backwrap-backend",
+  "version": "1.0.0",
+  "description": "This is the backend for the web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "hacktoberfest",
+    "opensource"
+  ],
+  "author": "Oluwayimika Oladipupo, Oyindamola Ajala, David Atanda, Peter Ojo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.5",
+    "nodemon": "^2.0.20"
+  }
+}
