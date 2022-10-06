@@ -1,10 +1,10 @@
 ---
 name: Add a Functionality
-about: Describe the functionality here.
+about: Functionality
 title: ''
-labels: enhancement, hacktoberfest
-assignees: Excellence-arch
+labels: ''
+assignees: ''
 
 ---
 
-
+**Describe the issue here**
