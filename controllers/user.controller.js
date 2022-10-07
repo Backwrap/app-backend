@@ -1,7 +1,7 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 9 */
 const userModel = require('../models/user.model');
 const bcrypt = require('bcryptjs');
-
+const jwt = require('jsonwebtoken');
 const registerUser =(req, res)=>{
     let {firstName, lastName, email, password} = req.body;
     userModel.findOne({email}, (err, user)=>{
@@ -37,5 +37,30 @@ const registerUser =(req, res)=>{
     });
 };
 
+const loginUser = (req, res) => {
+    let {email, password} = req.body;
+    userModel.findOne({email}, (err, user)=>{
+        if(err){
+            return res.status(500).send({message: 'Error occured'});
+        }else{
+            if(user){
+                bcrypt.compare(password, user.password, (err, result)=>{
+                    if(err){
+                        return res.status(500).send({message: 'Error occured'});
+                    }else{
+                        if(result){
+                            let token = jwt.sign({id: user._id}, process.env.JWT_SECRET, {expiresIn: 300});
+                            return res.status(200).send({message: 'Login successful', status: true, token, ...user._doc});
+                        }else{
+                            return res.status(400).send({message: 'Invalid password', status: false});
+                        }
+                    }
+                });
+            }else{
+                return res.status(400).send({message: 'User does not exist', status: false});
+            }
+        }
+    });
+};
 
-module.exports = {registerUser};
+module.exports = {registerUser, loginUser};
