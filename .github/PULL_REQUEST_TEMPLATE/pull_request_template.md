@@ -16,6 +16,8 @@ Please delete options that are not relevant.
 
 # Checklist:
 
+Please Mark [x] for completed and [] for uncompleted tasks
+
 - [ ] My code follows the style guidelines of this project
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
