@@ -7,6 +7,9 @@
 - Add a **.env** file and set `PORT = 5000`
 - Run `npm start` or `nodemon server` or `node server` to start the app
 
+# Contact
+Please join our [Discord](https://discord.gg/2cxcmcu6PN) channel
+
 # :key: LICENSE
 This project is licensed with `MIT`
 
