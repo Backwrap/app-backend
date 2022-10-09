@@ -32,8 +32,12 @@ const userSchema = mongoose.Schema({
         validate: (value)=>{
             return value.length >= 8;
         },
-        message: 'Password must be at least 6 characters long',
+        message: 'Password must be at least 8 characters long',
     },
+    type: {
+        type: String,
+        default: 'user',
+    }
 });
 
 const userModel = mongoose.model('User', userSchema);
